@@ -6,14 +6,13 @@
 [![Gemnasium](https://img.shields.io/gemnasium/compwron/food-runners.svg)](https://gemnasium.com/compwron/food-runners)
 [![License](https://img.shields.io/badge/license-Apache_2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
-
-Integrates with http://www.foodrunners.org/ (San Francisco area only) to summon pickup of food programatically from ruby.
+Unofficial integration with http://www.foodrunners.org/ (San Francisco area only) to summon pickup of leftover food for donation to worthy causes
 
 I have communicated briefly with Food Runners via email but I am not sure that we understand each other thouroughly.
 
 All donation requests will include a short note about this rubygem.
 
-There is no testing mode. ``.donate!`` contacts a real human being in the Food Runners organization.
+There is no testing mode. ``.submit!`` contacts a real human being in the Food Runners organization.
 
 ## Installation
 
