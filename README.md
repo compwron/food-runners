@@ -34,7 +34,7 @@ Or install it yourself as:
 ## Usage
 
 ````ruby
-contact_info = FoodRunners::Contact.new('company name', 'donater name', 'donater email', 'donater phone number', 'pickup addess', 'pickup zip code')
+contact_info = FoodRunners::Contact.new('company name', 'donater name', 'donater email', 'donater phone number', 'pickup address', 'pickup zip code')
 
 pickup_date_time = FoodRunners::PickupTime.new(FoodRunners::PickupDay::TOMORROW, 13) # hour of day
 

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Food::Runners do
+describe FoodRunners do
   it 'has a version number' do
-    expect(Food::Runners::VERSION).not_to be nil
+    expect(FoodRunners::VERSION).not_to be nil
   end
 
   it 'does something useful' do
