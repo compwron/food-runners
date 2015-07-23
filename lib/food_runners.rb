@@ -1,7 +1,5 @@
-require "food/runners/version"
+require "food_runners/version"
 
-module Food
-  module Runners
-    # Your code goes here...
-  end
+module FoodRunners
+
 end

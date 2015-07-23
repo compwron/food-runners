@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'food/runners/version'
+require 'food_runners/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "food-runners"
-  spec.version       = Food::Runners::VERSION
-  spec.authors       = ["lgoldstein"]
-  spec.email         = ["lgoldstein@groupon.com"]
+  spec.version       = FoodRunners::VERSION
+  spec.authors       = ["compwron"]
+  spec.email         = ["compiledwrong@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Summon Food Runners}
+  spec.description   = %q{Unofficial integration with http://www.foodrunners.org/ to summon pickup of leftover food for donation to worthy causes}
+  spec.homepage      = "https://github.com/compwron/food-runners"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.

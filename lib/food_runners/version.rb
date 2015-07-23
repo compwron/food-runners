@@ -1,5 +1,3 @@
-module Food
-  module Runners
-    VERSION = "0.1.0"
-  end
+module FoodRunners
+  VERSION = "0.1.0"
 end
