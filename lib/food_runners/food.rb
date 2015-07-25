@@ -1,2 +1,4 @@
-class Food
+module FoodRunners
+  class Food
+  end
 end
