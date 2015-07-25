@@ -1,35 +1,42 @@
-class PickupTime
-  FoodRunners::PickupDay::TODAY = 0
-  FoodRunners::PickupDay::TOMORROW = 1
+module FoodRunners
+  class PickupTime
 
-  def day
-    @day
-  end
-
-  def time
-    if Time.now.hour == @pickup_time.hour
-      TIME_OPTIONS[:now]
-    elsif (VALID_PICKUP_HOURS.include?(@pickup_time.hour)
-      TIME_OPTIONS[@pickup_time.hour]
+    attr_reader :day, :hour
+    def initialize(day_type, hour)
+      unless PickupDay::ALL.include?(day_type)
+        raise FoodRunners::Error::InvalidPickupDate
+      end
+      @day = day_type
+      @hour = time(hour)
     end
-  end
 
-  VALID_PICKUP_HOURS = (8..20).to_a
+    def day
+      @day
+    end
 
-  TIME_OPTIONS = time_options
+    def time(hour)
+      # if Time.now.hour == hour
+      #   TIME_OPTIONS[:now]
+      if (VALID_PICKUP_HOURS.include?(hour))
+        TIME_OPTIONS[hour]
+      else
+        raise FoodRunners::Error::InvalidPickupHour
+      end
+    end
 
-  def time_options
-    [].tap {|pickup_times|
-      pickup_times[:now]  = 'It is packaged and ready to go'
+    VALID_PICKUP_HOURS = (8..20).to_a
+
+    TIME_OPTIONS = {}.tap { |pickup_times|
+      pickup_times[:now] = 'It is packaged and ready to go'
 
       (8..11).each { |i|
-        pickup_times[i] => "From #{i}am"
+        pickup_times[i] = "From #{i}am"
       }
 
-      pickup_times[12] => 'From 12pm'
+      pickup_times[12] = 'From 12pm'
 
       (13..20).map { |i|
-         pickup_times[i] => "From #{i - 12}pm"
+        pickup_times[i] = "From #{i - 12}pm"
       }
     }
   end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Contact do
+describe FoodRunners::Contact do
   let(:company_name) { 'company name' }
   let(:donater_name) { 'donater name' }
   let(:donater_email) { 'a@b.com' }
